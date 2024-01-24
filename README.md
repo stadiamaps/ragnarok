@@ -1,23 +1,23 @@
 # Ragnarök
 
-This is a tool for debugging and inspecting routing from a Valhalla server.
+This is a tool for debugging and inspecting routing responses from Valhalla.
 
 ![Screenshot](screenshot.png)
 
-## Project Setup
+## How to use?
 
-```sh
-npm install
-```
+1. Get a Valhalla route JSON response 
+2. Head over to [stadiamaps.github.io/ragnarok](https://stadiamaps.github.io/ragnarok/)
+3. Paste it in the data box (and maybe adjust the zoom; it's not very smart)
+4. Hover over route segments to inspect each maneuver
 
-### Compile and Hot-Reload for Development
+## What's Valhalla?
 
-```sh
-npm run dev
-```
+[Valhalla](https://github.com/valhalla/valhalla) is an incredibly flexible routing engine originally developed at Mapzen.
+It has long been one of the premier open-source routing engines,
+and  it's used by a few companies you may have heard of (like Mapbox and Tesla).
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+At Stadia Maps, we've been contributors to the project for almost as long as we've been around.
+We built this tool to help us debug complex routing issues, particularly the kind we encounter when developing custom routing profiles.
+Check out our [routing APIs](https://docs.stadiamaps.com/routing/?utm_source=github&utm_campaign=routing&utm_content=ragnarok)
+if you're looking for a routing solution with support.
