@@ -3,7 +3,7 @@ import ValhallaResponseVisualizer
   from "@/components/ValhallaResponseVisualizer.vue";
 import {ref} from "vue";
 
-const data = ref('data');
+const data = ref('');
 </script>
 
 <template>
