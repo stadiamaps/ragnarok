@@ -1,6 +1,13 @@
 # Ragnarök
 
-This is a tool for debugging and inspecting routing responses from Valhalla.
+This is a tool for debugging and inspecting routing responses from [Valhalla](https://github.com/valhalla/valhalla).
+API responses are pretty hard to visualize!
+When developing custom routing profiles, we wanted something to quickly visualize the route,
+including the relative costs of each maneuver.
+So, here it is!
+
+This assuredly has bugs, and has not been tested with much besides fairly "vanilla" route requests.
+PRs welcome for improvements.
 
 ![Screenshot](screenshot.png)
 

@@ -13,6 +13,10 @@ const data = ref('');
       Paste a Valhalla API response:
     </p>
     <textarea v-model="data"></textarea>
+    <p>
+      Check the <a href="https://github.com/stadiamaps/ragnarok">repository on GitHub</a>
+      for usage instructions.
+    </p>
   </main>
 </template>
 
