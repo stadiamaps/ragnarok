@@ -131,10 +131,10 @@ const segmentColorOverrides = ref({})
   <l-map id="map" :center="[(bbox[1] + bbox[3]) / 2, (bbox[0] + bbox[2]) / 2]"
          :zoom="12" :use-global-leaflet="false">
     <l-tile-layer
-        url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png"
+        url="https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png"
         layer-type="base"
         name="Stadia Maps Basemap"
-        attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>''
     />
     <l-polyline v-for="(segment, idx) in segments" :lat-lngs="segment.shape"
                 :weight="7"
