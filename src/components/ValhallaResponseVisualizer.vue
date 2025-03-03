@@ -4,6 +4,7 @@ import {
   LMap,
   LMarker,
   LPolyline,
+  LPopup,
   LTileLayer,
   LTooltip
 } from "@vue-leaflet/vue-leaflet";
@@ -119,8 +120,8 @@ const segments = computed(function () {
 const locations = computed(function () {
   if (data.value.trip) {
     return data.value.trip.locations.map(function (location) {
-      return [location.lat, location.lon];
-    })
+      return [location.lat, location.lon, location.original_index ?? "N/A"];
+    });
   }
 });
 
@@ -146,7 +147,17 @@ const segmentColorOverrides = ref({})
         <pre>{{ segment.data }}</pre>
       </l-tooltip>
     </l-polyline>
-    <l-marker v-for="location in locations" :lat-lng="location"></l-marker>
+    <l-marker v-for="location in locations" 
+        :lat-lng="[location[0], location[1]]" 
+        :key="'${location[0]},${location[1]}'">
+      <l-popup>
+        <div>
+          <strong>original_index:</strong> {{ location[2] }} <br>
+          <strong>lat:</strong> {{ location[0] }} <br>
+          <strong>lng:</strong> {{ location[1] }}
+        </div>
+      </l-popup>
+  </l-marker>
   </l-map>
 </template>
 
